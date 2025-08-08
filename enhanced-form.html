@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillUp Learning Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: hwb(245 2% 4%);
+    }
+
+    header, nav, main, footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: hwb(0 2% 95%);
+      color: lch(86.85% 117.08 136.5);
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: hwb(0 85% 10%);
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: hsl(286, 94%, 48%);
+      font-weight: bold;
+    }
+
+    section {
+      background-color: lch(3.13% 0.74 53.3);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid hsl(306, 40%, 43%);
+      padding: 10px;
+      text-align: left;
+    }
+
+    img, video {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label, legend {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #894c4c;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SkillUp Learning Portal</h1>
+    <p>Empowering learners with modern web skills</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#register">Register</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Features Section -->
+    <section id="features">
+      <h1>FEATURES</h1>
+      <h2>Platform Features</h2>
+      <ul>
+        <li>Self-paced courses in HTML, CSS, and JavaScript</li>
+        <li>Hands-on coding challenges and projects</li>
+        <li>Instructor-led webinars and peer forums</li>
+        <li>Certificates upon completion</li>
+      </ul>
+    </section>
+
+    <!-- Schedule Table Section -->
+    <section id="schedule">
+      <H1>SCHEDULE</H1>
+      <h2>Weekly Course Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML Fundamentals</td>
+            <td>9:00 AM - 11:00 AM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS Basics</td>
+            <td>9:00 AM - 11:00 AM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>JavaScript Essentials</td>
+            <td>9:00 AM - 11:00 AM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+      <h1>MEDIA</h1>
+      <h2>Inside the Learning Portal</h2>
+      <img src="media/pexels-max-fischer-5212697.jpg" alt="Learners engaged in online class">
+      <video controls>
+        <source src="media/MyVideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Form Section -->
+    <section id="register">
+      <H1>REGISTER NOW</H1>
+      <h2>Register Now</h2>
+      <form action="/submit" method="POST" autocomplete="on">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Jason Stathan" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+25412345678" pattern="\+?[0-9]{10,15}" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Unique username" minlength="5" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Min 6 characters" minlength="6" required />
+
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" minlength="6" required />
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Info</legend>
+
+          <label for="course">Course Selection:</label>
+          <select id="course" name="course" required>
+            <option value="">-- Please choose --</option>
+            <option value="html">HTML5 Mastery</option>
+            <option value="css">CSS Flex & Grid</option>
+            <option value="js">JavaScript Bootcamp</option>
+          </select>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+          <label for="refcode">Referral Code:</label>
+          <input type="text" id="refcode" name="refcode" value="SKILLUP2025" readonly />
+
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to the terms and conditions
+          </label>
+        </fieldset>
+
+        <input type="submit" value="Create Account" />
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SkillUp Learning Portal. Designed with ❤️ for learners.</p>
+  </footer>
+
+</body>
+</html>
